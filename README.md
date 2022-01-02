@@ -30,6 +30,7 @@ let myData = 'myData';
 
 device.connect('https://dev.node-m2m.com', () => {
 
+  device.setGpio({mode:'input', pin:[11, 13]});
   device.setGpio({mode:'output', pin:[33, 35]});
 
   device.setData('get-data', (data) => {
@@ -90,6 +91,7 @@ let myData = 'myData';
 
 device.connect('https://dev.node-m2m.com', () => {
 
+  device.setGpio({mode:'input', pin:[11, 13], type:'simulation'});
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'});
 
   device.setData('get-data', (data) => {
@@ -126,6 +128,13 @@ const device = new Device(200);
 
 device.connect('https://dev.node-m2m.com', () => {
   device.setGpio({mode:'out', pin:[33, 35], type:'simulation'}, gpio => console.log(gpio.pin, gpio.state));
+  
+  device.setData('random-number', (data) => {
+    let r = Math.floor(Math.random() * 100) + 25;
+    data.send(r);
+    console.log('random', r);
+  });
+  
 });
 ```
 ##### 3. Start your device application.
