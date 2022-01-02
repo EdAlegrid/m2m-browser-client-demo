@@ -67,6 +67,12 @@ const device = new Device(200);
 
 device.connect('https://dev.node-m2m.com', () => {
   device.setGpio({mode:'out', pin:[33, 35]}, gpio => console.log(gpio.pin, gpio.state));
+  
+  device.setData('random-number', (data) => {
+    let r = Math.floor(Math.random() * 100) + 25;
+    data.send(r);
+    console.log('random', r);
+  });
 });
 ```
 ##### 3. Start your device application.
