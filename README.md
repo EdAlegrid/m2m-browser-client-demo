@@ -1,13 +1,13 @@
-# m2m web-application demo
+# m2m browser client web-application demo
 
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-This is a quick demo on how to integrate *m2m* into your http web application project. It also demonstrates how m2m devides your application into autonomous processes following the microservices architecture pattern.
+This is a quick demo on how to integrate *m2m* into your http web application project. It demonstrates how m2m devides your application into autonomous processes following the microservices architecture pattern.
 
-The demo consists of a simple front-end setup using fetch() and a back-end server using node and express.
+The demo consists of a simple front-end using a browser client and a back-end server using node and express.
 
-The back-end server can be hosted from any platform - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2* which are running on their own independent processes.
+The back-end server can be hosted from any platform - Linux, Windows or Mac. The server practically just serves a static index.html and the node-m2m.min.js files in the public folder.
 
 The remote devices ideally should be a Raspberry Pi device for this demo. However, if their are not available, you can just use any computers - Linux or Windows instead.
 
@@ -135,13 +135,13 @@ $ node device.js
 
 ## Web Application Setup
 
-##### 1. Download the *m2m-web-application-demo* project from *GitHub*.
+##### 1. Download the *m2m-browser-client-demo* project from *GitHub*.
 ```js
-$ git clone https://github.com/EdAlegrid/m2m-web-application-demo.git
+$ git clone https://github.com/EdAlegrid/m2m-browser-client-demo.git
 ```
-##### 2. Install all node dependencies inside *m2m-web-application-demo* directory.
+##### 2. Install all node dependencies inside *m2m-browser-client-demo* directory.
 ```js
-$ cd m2m-web-application-demo
+$ cd m2m-browser-client-demo
 ```
 ```js
 $ npm install
