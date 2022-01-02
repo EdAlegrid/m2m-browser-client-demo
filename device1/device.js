@@ -4,7 +4,7 @@ let device = new Device(100);
 
 let myData = 'myData';
 
-device.connect('https://dev.node-m2m.com', () => {
+device.connect('https://www.node-m2m.com', () => {
 
   //device.setGpio({mode:'output', pin:[33, 35]}); // raspberry pi
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'}); // windows or linux
