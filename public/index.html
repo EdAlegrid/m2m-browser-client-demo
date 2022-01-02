@@ -338,7 +338,7 @@
       pin = 35;
       msg = 'msg4';
     }
-    console.log('status', status, pin)
+
     if(status){
       client.output({id:id, pin:pin}).on((state) => {
         console.log('sw on', pin);  
