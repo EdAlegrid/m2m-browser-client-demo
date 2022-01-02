@@ -1,0 +1,10 @@
+{
+  "name": "m2m-browser-client-demo",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "~4.17.1",
+    "m2m": "^1.8.6",
+    "morgan": "^1.10.0"
+  }
+}
