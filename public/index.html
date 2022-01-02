@@ -341,7 +341,6 @@
 
     if(status){
       client.output({id:id, pin:pin}).on((state) => {
-        console.log('sw on', pin);  
         document.getElementById(msg).innerHTML = state;
       });
     }
