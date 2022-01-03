@@ -7,7 +7,7 @@ This is a quick demo on how to integrate *m2m* into your http web application pr
 
 The demo consists of a simple front-end using a browser client and a back-end server using node and express.
 
-The back-end server can be hosted from any platform - Linux, Windows or Mac. The server practically just serves a static index.html and the node-m2m.min.js files in the public folder.
+The back-end server can be hosted from any platform - Linux, Windows or Mac. The server practically just serves a static index.html file and the node-m2m.min.js file in the public folder.
 
 The remote devices ideally should be a Raspberry Pi device for this demo. However, if their are not available, you can just use any computers - Linux or Windows instead.
 
