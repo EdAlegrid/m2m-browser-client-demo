@@ -390,8 +390,7 @@
 
     function watchData(){
       console.log('watchData');
-      client.watch({id:200, channel:'random-number', interval:1000}, (data) => {
-      //client.watch({id:200, channel:'random-number'}, (data) => {
+      client.watch({id:200, channel:'random-number'}, (data) => {
         document.getElementById('msg7').innerHTML = data;  
       });
     }
