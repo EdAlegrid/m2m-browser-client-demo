@@ -166,8 +166,7 @@ $ npm install
 ```
 ##### 4. Replace the access token in your index.html file.
 
-`m2m-browser-client-demo/public/index.html`
-
+Replace the acces token from the `script` section of your `/m2m-browser-client-demo/public/index.html` file. 
 ```js
 <script>
 
