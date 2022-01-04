@@ -151,7 +151,7 @@ $ node device.js
 ## Web Application Setup
 
 ##### 1. Click the link below to create an access token.
-[Create Access Token for Browser Client](https://github.com/EdAlegrid/m2m-api#create-an-access-token-for-browser-client)
+[Create Access Token for Browser Client.](https://github.com/EdAlegrid/m2m-api#create-an-access-token-for-browser-client)
 
 ##### 2. Download the *m2m-browser-client-demo* project from *GitHub*.
 ```js
@@ -170,7 +170,7 @@ Replace the acces token from the `script` section of your `/m2m-browser-client-d
 ```js
 <script>
 
-// Replace the tkn below with your actual access token. Protect your access token at all times  
+// Replace the tkn below with your actual access token. Protect your access token at all times.  
 var tkn = 'fce454138116159a6ad9a4234e7de810a1087fa9e7fbfda74503d9f52616fc5';
 
 var client = new NodeM2M.Client();
