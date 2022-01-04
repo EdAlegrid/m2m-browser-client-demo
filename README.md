@@ -164,11 +164,27 @@ $ cd m2m-browser-client-demo
 ```js
 $ npm install
 ```
-##### 4. Start the web application server.
+##### 4. Replace the access token in your index.html file.
+
+`m2m-browser-client-demo/public/index.html`
+
+```js
+<script>
+
+// Replace the tkn below with your actual access token. Protect your access token at all times  
+var tkn = 'fce454138116159a6ad9a4234e7de810a1087fa9e7fbfda74503d9f52616fc5';
+
+var client = new NodeM2M.Client();
+
+client.connect(tkn, () => {
+  // application logic
+});  
+```
+##### 5. Start the web application server.
 ```js
 $ node app
 ```
-##### 5. Open a browser tab.
+##### 6. Open a browser tab.
 `http://127.0.0.1:4000`
 
 The web application page should show the various sections with control buttons to try out how *m2m* communicates with the remote devices to control gpio outputs and access data.
