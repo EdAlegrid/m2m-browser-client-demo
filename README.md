@@ -150,22 +150,24 @@ $ node device.js
 
 ## Web Application Setup
 
-##### 1. Download the *m2m-browser-client-demo* project from *GitHub*.
+##### 1. [Create Access Token for Browser Client](#create-an-access-token-for-browser-client)
+
+##### 2. Download the *m2m-browser-client-demo* project from *GitHub*.
 ```js
 $ git clone https://github.com/EdAlegrid/m2m-browser-client-demo.git
 ```
-##### 2. Install all node dependencies inside *m2m-browser-client-demo* directory.
+##### 3. Install all node dependencies inside *m2m-browser-client-demo* directory.
 ```js
 $ cd m2m-browser-client-demo
 ```
 ```js
 $ npm install
 ```
-##### 3. Start the web application server.
+##### 4. Start the web application server.
 ```js
 $ node app
 ```
-##### 4. Open a browser tab.
+##### 5. Open a browser tab.
 `http://127.0.0.1:4000`
 
 The web application page should show the various sections with control buttons to try out how *m2m* communicates with the remote devices to control gpio outputs and access data.
