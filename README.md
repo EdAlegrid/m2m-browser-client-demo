@@ -157,7 +157,7 @@ $ node device.js
 ```js
 $ git clone https://github.com/EdAlegrid/m2m-browser-client-demo.git
 ```
-##### 3. Install all node dependencies inside *m2m-browser-client-demo* directory.
+##### 3. Install all dependencies inside *m2m-browser-client-demo* directory.
 ```js
 $ cd m2m-browser-client-demo
 ```
