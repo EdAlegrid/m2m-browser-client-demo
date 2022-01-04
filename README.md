@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-This is a quick demo on how to integrate *m2m* into your http web application project. It demonstrates how m2m devides your application into autonomous processes following the microservices architecture pattern.
+This is a quick demo on how to integrate *m2m* into your http web application project.
 
 The demo consists of a simple front-end using a browser client and a back-end server using node and express.
 
