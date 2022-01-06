@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "~4.17.1",
-    "m2m": "^1.8.7",
+    "m2m": "^1.8.8",
     "morgan": "^1.10.0"
   }
 }
