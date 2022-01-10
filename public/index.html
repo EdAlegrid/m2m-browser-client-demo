@@ -95,7 +95,7 @@
               <a id="get-state" style="width:200px;" class="btn btn-primary" role="button" >Get state</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg9" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg5" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <a id="watch-state" style="width:200px;" class="btn btn-primary" role="button" >Watch state</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg10" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg6" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
               <a id="unwatch-state" style="width:200px;" class="btn btn-primary" role="button" >Unwatch state</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg11" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg7" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
               <a id="get-data" style="width:200px;" class="btn btn-primary" role="button" >Capture data</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg5" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg8" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@
               </form>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg6" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg9" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@
               <a id="watch-data" style="width:200px;" class="btn btn-primary" role="button" >Watch data</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg7" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg10" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
               <a id="unwatch-data" style="width:200px;" class="btn btn-primary" role="button" >Unwatch data</a>
             </div>
             <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg8" style="height:38px;padding:7px;"></div>    
+              <div class="border text-center" id="msg11" style="height:38px;padding:7px;"></div>    
             </div>
           </div>
         </div>
@@ -213,196 +213,190 @@
   <script>
 
   // use your actual token   
-  let tkn = 'fc775413116139a6ad9a4234e71de810a1087fa9e7fbfda74503d9f52616fc5';
+  var tkn = 'fc7754138116139a6ad9a4234e71de810a1212087fa9e7fbfda74503d9f52616fc5';
+  var toggleSwitch = true; 
 
   var client = new NodeM2M.Client(); 
 
-  client.connect(tkn, () => {
+  client.connect(tkn);
 
-    if(document.getElementById("deviceOn")){
-      document.getElementById("deviceOn").onclick = deviceOn;
+  document.getElementById("deviceOn").addEventListener('click', {
+    handleEvent: event => deviceOn('msg1')
+  });
+
+  document.getElementById("deviceOff").addEventListener('click', {
+    handleEvent: event => deviceOff('msg1')
+  });
+
+  if(document.getElementById("deviceToggle")){
+    document.getElementById("deviceToggle").onclick = deviceToggle;
+  }
+
+  document.getElementById("device-control1").addEventListener('click', {
+    handleEvent: event => deviceControl(1) 
+  });
+
+  document.getElementById("device-control2").addEventListener('click', {
+    handleEvent: event => deviceControl(2)
+  });
+
+  document.getElementById("device-control1").addEventListener('click', {
+    handleEvent: event => deviceControl(1) 
+  });
+
+  document.getElementById("device-control2").addEventListener('click', {
+    handleEvent: event => deviceControl(2)
+  });
+
+  // turn off device 200 pin 33 on page loading 
+  if(document.getElementById("device-control1")){
+    setTimeout(() => {
+      deviceControl(1);
+    }, 100);
+  }
+
+  // turn on device 200 pin 35 on page loading 
+  if(document.getElementById("device-control2")){
+    setTimeout(() => {
+      deviceControl(2);
+    }, 1000);
+  }
+
+  if(document.getElementById("get-state")){
+    document.getElementById("get-state").onclick = getState;
+  }
+
+  if(document.getElementById("watch-state")){
+    document.getElementById("watch-state").onclick = watchState;
+  }
+
+  if(document.getElementById("unwatch-state")){
+    document.getElementById("unwatch-state").onclick = unwatchState;
+  }
+
+  if(document.getElementById("get-data")){
+    document.getElementById("get-data").onclick = getData;
+  }
+
+  if(document.getElementById("send-data")){
+    document.getElementById("send-data").onclick = sendData;
+  }
+
+  if(document.getElementById("watch-data")){
+    document.getElementById("watch-data").onclick = watchData;
+  }
+
+  if(document.getElementById("unwatch-data")){
+    document.getElementById("unwatch-data").onclick = unwatchData;
+  }
+
+  function deviceOn(msg){
+    console.log('deviceOn');
+    client.output({id:100, pin:33}).on();
+    client.output({id:200, pin:33}).on();
+    client.output({id:100, pin:35}).on();
+    client.output({id:200, pin:35}).on();
+    document.getElementById(msg).innerHTML = 'on' 
+  }
+
+  function deviceOff(msg){
+    console.log('deviceOff');
+    client.output({id:100, pin:33}).off();
+    client.output({id:200, pin:33}).off();
+    client.output({id:100, pin:35}).off();
+    client.output({id:200, pin:35}).off();
+    document.getElementById(msg).innerHTML = 'off' 
+  }
+  
+  function deviceToggle(){
+    console.log('deviceToggle');
+    if(toggleSwitch){
+      deviceOn('msg2');
+      toggleSwitch = false;
+    }
+    else{
+      deviceOff('msg2');
+      toggleSwitch = true;
+    }
+  }
+
+  function deviceControl(sel){
+    console.log('deviceControl');
+    var id = 200, pin = null, msg = null, status = null;
+
+    if(sel === 1){
+      status = document.getElementById("device-control1").checked;
+      pin = 33;
+      msg = 'msg3';
+    }
+    else{
+      status = document.getElementById("device-control2").checked;
+      pin = 35;
+      msg = 'msg4';
     }
 
-    if(document.getElementById("deviceOff")){
-      document.getElementById("deviceOff").onclick = deviceOff;
+    if(status){
+      client.output({id:id, pin:pin}).on((state) => {
+        document.getElementById(msg).innerHTML = state;
+      });
     }
-
-    if(document.getElementById("deviceToggle")){
-      document.getElementById("deviceToggle").onclick = deviceToggle;
+    else{
+      client.output({id:id, pin:pin}).off((state) => {
+        document.getElementById(msg).innerHTML = state;
+      });
     }
+  }
 
-    document.getElementById("device-control1").addEventListener('click', {
-      handleEvent: event => deviceControl(1) 
+  function getState(){
+    console.log('getState');
+    client.input({id:100, pin:11}).getState((state) => {
+      document.getElementById('msg5').innerHTML = state;  
     });
+  }
 
-    document.getElementById("device-control2").addEventListener('click', {
-      handleEvent: event => deviceControl(2)
+  function watchState(){
+    console.log('watchState');
+    client.input({id:100, pin:11}).watch((state) => {
+      document.getElementById('msg6').innerHTML = state;  
     });
+  }
 
-    document.getElementById("device-control1").addEventListener('click', {
-      handleEvent: event => deviceControl(1) 
+  function unwatchState(){
+    console.log('unwatchState');
+    client.input({id:100, pin:11}).unwatch((state) => {
+      document.getElementById('msg7').innerHTML = state;  
     });
+  }
 
-    document.getElementById("device-control2").addEventListener('click', {
-      handleEvent: event => deviceControl(2)
+  function getData(){
+    console.log('getData');
+    client.getData({id:100, channel:'get-data'}, (data) => {
+      document.getElementById('msg8').innerHTML = data;  
     });
+  }
 
-    // turn off device 200 pin 33 on page loading 
-    if(document.getElementById("device-control1")){
-      setTimeout(() => {
-        deviceControl(1);
-      }, 100);
-    }
+  function sendData(){
+    console.log('sendData');
+    var inputData = document.getElementById("input-value").value;
+    client.sendData({id:100, channel:'send-data', payload:inputData}, (data) => {
+      document.getElementById('msg9').innerHTML = data;  
+    });
+  }
 
-    // turn on device 200 pin 35 on page loading 
-    if(document.getElementById("device-control2")){
-      setTimeout(() => {
-        deviceControl(2);
-      }, 1000);
-    }
+  function watchData(){
+    console.log('watchData');
+    client.watch({id:200, channel:'random-number'}, (data) => {
+      document.getElementById('msg10').innerHTML = data;  
+    });
+  }
 
-    if(document.getElementById("get-state")){
-      document.getElementById("get-state").onclick = getState;
-    }
-
-    if(document.getElementById("watch-state")){
-      document.getElementById("watch-state").onclick = watchState;
-    }
-
-    if(document.getElementById("unwatch-state")){
-      document.getElementById("unwatch-state").onclick = unwatchState;
-    }
-
-    if(document.getElementById("get-data")){
-      document.getElementById("get-data").onclick = getData;
-    }
-
-    if(document.getElementById("send-data")){
-      document.getElementById("send-data").onclick = sendData;
-    }
-
-    if(document.getElementById("watch-data")){
-      document.getElementById("watch-data").onclick = watchData;
-    }
-
-    if(document.getElementById("unwatch-data")){
-      document.getElementById("unwatch-data").onclick = unwatchData;
-    }
-
-    function deviceOn(){
-      console.log('deviceOn');
-      client.output({id:100, pin:33}).on();
-      client.output({id:200, pin:33}).on();
-      client.output({id:100, pin:35}).on();
-      client.output({id:200, pin:35}).on();
-      document.getElementById('msg1').innerHTML = 'on' 
-    }
-
-    function deviceOff(){
-      console.log('deviceOff');
-      client.output({id:100, pin:33}).off();
-      client.output({id:200, pin:33}).off();
-      client.output({id:100, pin:35}).off();
-      client.output({id:200, pin:35}).off();
-      document.getElementById('msg1').innerHTML = 'off' 
-    }
-
-    var toggleSwitch = false; 
-    function deviceToggle(){
-      console.log('deviceToggle');
-      if(toggleSwitch){
-        client.output({id:100, pin:33}).off((state) => {
-          document.getElementById('msg2').innerHTML = state;  
-          toggleSwitch = state;
-        }); 
-      }
-      else{
-        client.output({id:100, pin:33}).on((state) => {
-          document.getElementById('msg2').innerHTML = state;  
-          toggleSwitch = state; 
-        });
-      } 
-    }
-
-    function deviceControl(sel){
-      console.log('deviceControl');
-      var id = 200, pin = null, msg = null, status = null;
-
-      if(sel === 1){
-        status = document.getElementById("device-control1").checked;
-        pin = 33;
-        msg = 'msg3';
-      }
-      else{
-        status = document.getElementById("device-control2").checked;
-        pin = 35;
-        msg = 'msg4';
-      }
-
-      if(status){
-        client.output({id:id, pin:pin}).on((state) => {
-          document.getElementById(msg).innerHTML = state;
-        });
-      }
-      else{
-        client.output({id:id, pin:pin}).off((state) => {
-          document.getElementById(msg).innerHTML = state;
-        });
-      }
-    }
-
-    function getState(){
-      console.log('getState');
-      client.input({id:100, pin:11}).getState((state) => {
-        document.getElementById('msg9').innerHTML = state;  
-      });
-    }
-
-    function watchState(){
-      console.log('watchState');
-      client.input({id:100, pin:11}).watch((state) => {
-        document.getElementById('msg10').innerHTML = state;  
-      });
-    }
-
-    function unwatchState(){
-      console.log('unwatchState');
-      client.input({id:100, pin:11}).unwatch((state) => {
-        document.getElementById('msg11').innerHTML = state;  
-      });
-    }
-
-    function getData(){
-      console.log('getData');
-      client.getData({id:100, channel:'get-data'}, (data) => {
-        document.getElementById('msg5').innerHTML = data;  
-      });
-    }
-
-    function sendData(){
-      console.log('sendData');
-      var inputData = document.getElementById("input-value").value;
-      client.sendData({id:100, channel:'send-data', payload:inputData}, (data) => {
-        document.getElementById('msg6').innerHTML = data;  
-      });
-    }
-
-    function watchData(){
-      console.log('watchData');
-      client.watch({id:200, channel:'random-number'}, (data) => {
-        document.getElementById('msg7').innerHTML = data;  
-      });
-    }
-
-    function unwatchData(){
-      console.log('unwatchData');
-      client.unwatch({id:200, channel:'random-number'}, (data) => {
-        document.getElementById('msg8').innerHTML = data;  
-      });
-    }
-
-  });   
-
+  function unwatchData(){
+    console.log('unwatchData');
+    client.unwatch({id:200, channel:'random-number'}, (data) => {
+      document.getElementById('msg11').innerHTML = data;  
+    });
+  }
+  
   </script>
   <br>
   <footer class="footer mt-auto py-3 bg-light">
