@@ -14,199 +14,197 @@
   </head>
   <body>
 
-<!-- page content -->
-<main>
-  <h1 class="visually-hidden">Headers examples</h1>
+  <!-- page content -->
+  <main>
+    <h1 class="visually-hidden">Headers examples</h1>
 
-  <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <span class="fs-5">Node-M2M Browser Client Web Application Integration Demo</span>
-      </a>
-    </header>
-  </div>
-  
-  <div class="container">
-    <div class="row justify-content-evenly">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-5">Node-M2M Browser Client Web Application Integration Demo</span>
+        </a>
+      </header>
+    </div>
+    <div class="container">
+      <div class="row justify-content-evenly">
 
-    <div class="col-6">
-      Basic Remote Control
-      <div class="card mt-3" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Device Actuator Remote Control</h6>
-          <p class="card-text">Switch on/off device 100 and 200 gpio output pin 33 and 35.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="deviceOn" style="width:100px;" class="btn btn-primary" role="button" >ON</a>
-              <a id="deviceOff" style="width:100px;" class="btn btn-primary" role="button" >OFF</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg1" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Device Actuator Remote Control (toggle button)</h6>
-          <p class="card-text">Switch on/off device 100 gpio output pin 33.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="deviceToggle" style="width:200px;" class="btn btn-primary" role="button" >ON/OFF</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg2" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Device Actuator Remote Control (toggle switch)</h6>
-          <p class="card-text">Switch on/off device 200 gpio output pin 33 and 35.</p>
-          <div class="row justify-content-start">
-            <div class="col-1"></div>
-            <div class="col-4">
-              <div class="form-check form-switch mb-2">
-              <input class="form-check-input" type="checkbox" role="switch" id="device-control1" >
-                <label class="form-check-label" for="device-control1"> pin 33</label>
+      <div class="col-6">
+        Basic Remote Control
+        <div class="card mt-3" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Device Actuator Remote Control</h6>
+            <p class="card-text">Switch on/off device 100 and 200 gpio output pin 33 and 35.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="deviceOn" style="width:100px;" class="btn btn-primary" role="button" >ON</a>
+                <a id="deviceOff" style="width:100px;" class="btn btn-primary" role="button" >OFF</a>
               </div>
-              <div class="form-check form-switch mb-2">
-              <input class="form-check-input" type="checkbox" role="switch" id="device-control2" checked>
-                <label class="form-check-label" for="device-control2"> pin 35</label>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg1" style="height:38px;padding:7px;"></div>    
               </div>
             </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg3" style="height:30px;padding:0px;"></div>
-              <div class="border text-center" id="msg4" style="height:30px;padding:0px;"></div>       
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Device Actuator Remote Control (toggle button)</h6>
+            <p class="card-text">Switch on/off device 100 gpio output pin 33.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="deviceToggle" style="width:200px;" class="btn btn-primary" role="button" >ON/OFF</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg2" style="height:38px;padding:7px;"></div>    
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Get the current state of Device Input</h6>
-          <p class="card-text">Get current state of device 100 gpio input pin 11. Push down the sw connected on pin 11 and click the button. Release the sw and click the button again.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="get-state" style="width:200px;" class="btn btn-primary" role="button" >Get state</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg5" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Watch the state of Device Input</h6>
-          <p class="card-text">Watch state of device 100 gpio input pin 11. Push and release the sw connected on pin 11.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="watch-state" style="width:200px;" class="btn btn-primary" role="button" >Watch state</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg6" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Unwatch the state of Device Input</h6>
-          <p class="card-text">Unwatch state of device 100 gpio input pin 11.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="unwatch-state" style="width:200px;" class="btn btn-primary" role="button" >Unwatch state</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg7" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- class="col-6" -->
-
-    <div class="col-6">
-      Capturing And Sending Data
-      <div class="card mt-3" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Capture Data from Device</h6>
-          <p class="card-text">Capture data from device 100 using <i>get-data</i> channel.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="get-data" style="width:200px;" class="btn btn-primary" role="button" >Capture data</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg8" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card mt-0" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Send Data to Device</h6>
-          <p class="card-text">Send data to device 100 using <i>send-data</i> channel.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <form class="row g-3">
-                <div class="col-auto">
-                  <label for="input-value" class="visually-hidden">Enter data</label>
-                  <input id="input-value" type="text" class="form-control"  placeholder="Enter data">
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Device Actuator Remote Control (toggle switch)</h6>
+            <p class="card-text">Switch on/off device 200 gpio output pin 33 and 35.</p>
+            <div class="row justify-content-start">
+              <div class="col-1"></div>
+              <div class="col-4">
+                <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="device-control1" >
+                  <label class="form-check-label" for="device-control1"> pin 33</label>
                 </div>
-                <div class="col-auto">
-                  <button id="send-data" style="width:200px;" type="button" class="btn btn-primary mb-0">Send data</button>
+                <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="device-control2" checked>
+                  <label class="form-check-label" for="device-control2"> pin 35</label>
                 </div>
-              </form>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg9" style="height:38px;padding:7px;"></div>    
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Watch Data from Device</h6>
-          <p class="card-text">Watch <i>random-number</i> channel data from device 200.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="watch-data" style="width:200px;" class="btn btn-primary" role="button" >Watch data</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg10" style="height:38px;padding:7px;"></div>    
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg3" style="height:30px;padding:0px;"></div>
+                <div class="border text-center" id="msg4" style="height:30px;padding:0px;"></div>       
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <br>
-      <div class="card" style="width:500px">
-        <div class="card-body">
-          <h6 class="card-title">Unwatch Data from Device</h6>
-          <p class="card-text">Unwatch <i>random-number</i> channel data from device 200.</p>
-          <div class="row justify-content-start">
-            <div class="col-6">
-              <a id="unwatch-data" style="width:200px;" class="btn btn-primary" role="button" >Unwatch data</a>
-            </div>
-            <div class="col-4 align-self-start">
-              <div class="border text-center" id="msg11" style="height:38px;padding:7px;"></div>    
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Get the current state of Device Input</h6>
+            <p class="card-text">Get current state of device 100 gpio input pin 11. Push down the sw connected on pin 11 and click the button. Release the sw and click the button again.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="get-state" style="width:200px;" class="btn btn-primary" role="button" >Get state</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg5" style="height:38px;padding:7px;"></div>    
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div><!-- class="col-6" -->
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Watch the state of Device Input</h6>
+            <p class="card-text">Watch state of device 100 gpio input pin 11. Push and release the sw connected on pin 11.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="watch-state" style="width:200px;" class="btn btn-primary" role="button" >Watch state</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg6" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Unwatch the state of Device Input</h6>
+            <p class="card-text">Unwatch state of device 100 gpio input pin 11.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="unwatch-state" style="width:200px;" class="btn btn-primary" role="button" >Unwatch state</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg7" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- class="col-6" -->
+      <div class="col-6">
+        Capturing And Sending Data
+        <div class="card mt-3" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Capture Data from Device</h6>
+            <p class="card-text">Capture data from device 100 using <i>get-data</i> channel.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="get-data" style="width:200px;" class="btn btn-primary" role="button" >Capture data</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg8" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card mt-0" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Send Data to Device</h6>
+            <p class="card-text">Send data to device 100 using <i>send-data</i> channel.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <form class="row g-3">
+                  <div class="col-auto">
+                    <label for="input-value" class="visually-hidden">Enter data</label>
+                    <input id="input-value" type="text" class="form-control"  placeholder="Enter data">
+                  </div>
+                  <div class="col-auto">
+                    <button id="send-data" style="width:200px;" type="button" class="btn btn-primary mb-0">Send data</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg9" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Watch Data from Device</h6>
+            <p class="card-text">Watch <i>random-number</i> channel data from device 200.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="watch-data" style="width:200px;" class="btn btn-primary" role="button" >Watch data</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg10" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width:500px">
+          <div class="card-body">
+            <h6 class="card-title">Unwatch Data from Device</h6>
+            <p class="card-text">Unwatch <i>random-number</i> channel data from device 200.</p>
+            <div class="row justify-content-start">
+              <div class="col-6">
+                <a id="unwatch-data" style="width:200px;" class="btn btn-primary" role="button" >Unwatch data</a>
+              </div>
+              <div class="col-4 align-self-start">
+                <div class="border text-center" id="msg11" style="height:38px;padding:7px;"></div>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- class="col-6" -->
 
-    </div><!-- row -->
-  </div><!-- container-->
+      </div><!-- row -->
+    </div><!-- container-->
 
-</main>
+  </main>
    
   <script src="/javascripts/node-m2m.min.js"></script>
 
