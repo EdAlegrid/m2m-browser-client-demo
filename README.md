@@ -184,6 +184,6 @@ client.connect(tkn, () => {
 $ node app
 ```
 ##### 6. Open a browser tab.
-`http://127.0.0.1:4000`
+`http://127.0.0.1:4500`
 
 The web application page should show the various sections with control buttons to try out how *m2m* communicates with the remote devices to control gpio outputs and access data.
