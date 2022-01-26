@@ -211,12 +211,12 @@
   <script>
 
   // use your actual token   
-  var tkn = 'fc7754138116139a6ad9a4234e71de810a1212087fa9e7fbfda74503d9f52616fc5';
+  var tkn = 'fc7754138116139a6ad9a4234e71de810a1212087fa9e7fbfda745039f52616fc5';
   var toggleSwitch = true; 
 
   var client = new NodeM2M.Client(); 
 
-  client.connect(tkn);
+  client.connect(tkn, () => {
 
   document.getElementById("deviceOn").addEventListener('click', {
     handleEvent: event => deviceOn('msg1')
@@ -394,6 +394,11 @@
       document.getElementById('msg11').innerHTML = data;  
     });
   }
+    
+  watchState();
+  watchData();
+      
+  });  
   
   </script>
   <br>
