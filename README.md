@@ -11,7 +11,7 @@ The back-end server can be hosted from any platform - Linux, Windows or Mac. The
 
 The remote devices ideally should be a Raspberry Pi device for this demo. However, if their are not available, you can just use any computers - Linux or Windows instead.
 
-## Option1 - Remote Devices Setup using Raspberry Pi with Led Actuator
+## Option1 - Setup Remote Devices using a Raspberry Pi with Led Actuator
 On both devices, install an led actuator on pin 33 and 35.
 Remote Device1
 
@@ -79,7 +79,7 @@ device.connect('https://dev.node-m2m.com', () => {
 ```js
 $ node device.js
 ```
-## Option2 - Remote Devices Setup using Windows or Linux
+## Option2 - Setup Remote Devices using Windows or Linux
 #### Remote Device1
 ##### Here, we don't need to install array-gpio instead the gpio output will run in simulation mode.
 ##### 1. Create a device project directory and install m2m inside the directory.
