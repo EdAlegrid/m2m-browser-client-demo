@@ -1,11 +1,13 @@
-# Web-application demo using only an m2m clien
+# Web-application demo using only an m2m client
 
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
 This is a quick demo on how to integrate *m2m* into your web application project.
 
-The demo consists of a simple front-end using an *m2m* client and a back-end server using node and express.
+The demo consists of a simple front-end using an *m2m client* and a back-end server using node and express.
+
+The *m2m client* in the browser will directly access and capture resources from the remote devices.
 
 The back-end server can be hosted from any platform - Linux, Windows or Mac. The server practically just serves a static index.html file and the node-m2m.min.js file in the public folder.
 
