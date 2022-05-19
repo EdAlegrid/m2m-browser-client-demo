@@ -9,9 +9,11 @@ The demo consists of a simple front-end using an *m2m client* and a back-end ser
 
 The *m2m client* in the browser will directly access and capture resources from the remote devices.
 
-The back-end server can be hosted from any platform - Linux, Windows or Mac. The server practically just serves a static index.html file and the node-m2m.min.js file in the public folder.
+The back-end server can be hosted from any platform - Linux, Windows or Mac.
 
-The remote devices ideally should be a Raspberry Pi device for this demo. However, if their are not available, you can just use any computers - Linux or Windows instead.
+The server practically just serves a static *index.html* file and the *node-m2m.min.js* file in the public folder.
+
+The remote devices ideally should be Raspberry Pi devices. However, if their are not available, you can just use any computers - Linux or Windows instead in simulation mode.
 
 ## Option1 - Setup Remote Devices using a Raspberry Pi with Led Actuator
 On both devices, install an led actuator on pin 33 and 35.
