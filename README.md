@@ -89,7 +89,7 @@ $ node device.js
 ```
 <br>
 
-## Option2 - Setup Remote Devices using Windows or Linux
+## Option2 - Using Windows or Linux on the remote devices
 #### Remote Device1
 
 Here, you don't need to install the array-gpio module but instead the gpio resources will run in simulation mode.
