@@ -1,4 +1,4 @@
-# Web Application Demo using only an m2m Client
+# Web Application Demo Using Only an M2M Client
 
 [](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 ![](assets/webApplicationDemo.svg)
