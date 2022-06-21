@@ -23,6 +23,8 @@ On both devices, install an led actuator on pin 33 and 35.
 
 #### Remote Device1
 
+Install a switch button on pin 11.
+
 ##### 1. Create a device project directory and install *m2m* and *array-gpio*.
 ```js
 $ npm install m2m array-gpio
