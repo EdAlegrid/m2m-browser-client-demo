@@ -5,7 +5,7 @@
 
 This is a quick demo on how to integrate *m2m* into your web application project.
 
-The demo consists of a simple front-end using an *m2m client* and a back-end server using node and express.
+The demo consists of a simple front-end setup using an *m2m client*, a back-end server using *nodejs* and *express* and two remote devices. 
 
 The *m2m client* in the browser will directly access and capture resources from the remote devices.
 
