@@ -15,6 +15,8 @@ The server practically just serves a static *index.html* file and the *node-m2m.
 
 The two remote devices ideally should be Raspberry Pi devices. However, if their are not available, you can just use any computers - Linux or Windows (GPIO in simulation-mode) instead.
 
+<br>
+
 ## Option1 - Setup Remote Devices using a Raspberry Pi with Led Actuator
 On both devices, install an led actuator on pin 33 and 35.
 Remote Device1
@@ -83,6 +85,8 @@ device.connect('https://dev.node-m2m.com', () => {
 ```js
 $ node device.js
 ```
+<br>
+
 ## Option2 - Setup Remote Devices using Windows or Linux
 #### Remote Device1
 ##### Here, we don't need to install array-gpio instead the gpio output will run in simulation mode.
@@ -151,6 +155,8 @@ device.connect('https://dev.node-m2m.com', () => {
 ```js
 $ node device.js
 ```
+
+<br>
 
 ## Web Application Setup
 
