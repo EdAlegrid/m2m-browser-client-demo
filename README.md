@@ -18,14 +18,16 @@ The two remote devices ideally should be Raspberry Pi devices. However, if their
 <br>
 
 ## Option1 - Using a Raspberry Pi device with an led actuator
-On both devices, install an led actuator on pin 33 and 35.
-Remote Device1
 
-##### 1. Create a device project directory and install m2m and array-gpio inside the directory.
+On both devices, install an led actuator on pin 33 and 35.
+
+#### Remote Device1
+
+##### 1. Create a device project directory and install *m2m* and *array-gpio*.
 ```js
 $ npm install m2m array-gpio
 ```
-##### 2. Save the code below as device.js in your device project directory.
+##### 2. Save the code below as *device.js* in your device project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -60,11 +62,11 @@ $ node device.js
 ```
 #### Remote Device2
 
-##### 1. Create a device project directory and install m2m and array-gpio inside the directory.
+##### 1. Create a device project directory and install *m2m* and *array-gpio*.
 ```js
 $ npm install m2m array-gpio
 ```
-##### 2. Save the code below as device.js in your device project directory.
+##### 2. Save the code below as *device.js* in your device project directory.
 
 ```js
 const { Device } = require('m2m');
