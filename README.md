@@ -3,7 +3,7 @@
 ![](assets/webApplicationDemo.svg)
 [](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 
-This is a quick demo on how to integrate *m2m* into your web application project.
+<This is a quick demo on how to integrate *m2m* into your web application project.>
 
 The demo consists of a simple front-end setup using an *m2m client*, a back-end server (localhost) using *nodejs* and *express* and two remote devices. 
 
