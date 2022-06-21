@@ -17,7 +17,7 @@ The two remote devices ideally should be Raspberry Pi devices. However, if their
 
 <br>
 
-## Option1 - Setup Remote Devices using a Raspberry Pi with Led Actuator
+## Option1 - Using a Raspberry Pi device with an led actuator
 On both devices, install an led actuator on pin 33 and 35.
 Remote Device1
 
