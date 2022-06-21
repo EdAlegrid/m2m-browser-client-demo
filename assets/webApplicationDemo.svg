@@ -44,7 +44,7 @@
   </font>
  </defs>
  <defs class="TextShapeIndex">
-  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17"/>
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17 id18"/>
  </defs>
  <defs class="EmbeddedBulletChars">
   <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
@@ -99,16 +99,16 @@
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id4">
         <rect class="BoundingBox" stroke="none" fill="none" x="3408" y="3466" width="2931" height="1579"/>
-        <path fill="rgb(233,231,246)" stroke="none" d="M 4873,5035 L 3417,5035 3417,3475 6329,3475 6329,5035 4873,5035 Z"/>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 4873,5035 L 3417,5035 3417,3475 6329,3475 6329,5035 4873,5035 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" stroke-width="18" stroke-linejoin="round" d="M 4873,5035 L 3417,5035 3417,3475 6329,3475 6329,5035 4873,5035 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id5">
-        <rect class="BoundingBox" stroke="none" fill="none" x="3623" y="3737" width="2497" height="1037"/>
-        <path fill="rgb(255,255,255)" stroke="none" d="M 4871,4767 L 3629,4767 3629,3743 6113,3743 6113,4767 4871,4767 Z"/>
-        <path fill="none" stroke="rgb(52,101,164)" stroke-width="11" stroke-linejoin="round" d="M 4871,4767 L 3629,4767 3629,3743 6113,3743 6113,4767 4871,4767 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400"><tspan class="TextPosition" x="3768" y="4376"><tspan fill="rgb(0,0,0)" stroke="none">Browser client</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="3473" y="3524" width="2807" height="1435"/>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 4876,4952 L 3479,4952 3479,3530 6273,3530 6273,4952 4876,4952 Z"/>
+        <path fill="none" stroke="rgb(255,255,255)" stroke-width="11" stroke-linejoin="round" d="M 4876,4952 L 3479,4952 3479,3530 6273,3530 6273,4952 4876,4952 Z"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="3544" y="4389"><tspan fill="rgb(0,0,0)" stroke="none">Browser client</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -126,8 +126,8 @@
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id8">
-        <rect class="BoundingBox" stroke="none" fill="none" x="3022" y="5562" width="5081" height="1677"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="3272" y="6072"><tspan fill="rgb(0,0,0)" stroke="none">Backend-server</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="3272" y="6546"><tspan fill="rgb(0,0,0)" stroke="none">ip:127.0.0.1  port:4500</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="3124" y="5562" width="3608" height="814"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="3374" y="6072"><tspan fill="rgb(0,0,0)" stroke="none">Backend-server</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="Group">
@@ -189,6 +189,12 @@
        <g id="id17">
         <rect class="BoundingBox" stroke="none" fill="none" x="19837" y="6985" width="1956" height="788"/>
         <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="20087" y="7495"><tspan fill="rgb(0,0,0)" stroke="none">id:200</tspan></tspan></tspan></text>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.TextShape">
+       <g id="id18">
+        <rect class="BoundingBox" stroke="none" fill="none" x="2717" y="6172" width="5004" height="788"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="2967" y="6682"><tspan fill="rgb(0,0,0)" stroke="none">ip:</tspan><tspan fill="rgb(0,0,0)" stroke="none">127.0.0.1  port:4500</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>
