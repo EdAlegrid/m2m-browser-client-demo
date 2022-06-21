@@ -92,11 +92,12 @@ $ node device.js
 ## Option2 - Setup Remote Devices using Windows or Linux
 #### Remote Device1
 ##### Here, we don't need to install array-gpio instead the gpio output will run in simulation mode.
-##### 1. Create a device project directory and install m2m inside the directory.
+
+##### 1. Create a device project directory and install *m2m*.
 ```js
 $ npm install m2m
 ```
-##### 2. Save the code below as device.js in your device project directory.
+##### 2. Save the code below as *device.js* in your device project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -131,11 +132,11 @@ $ node device.js
 ```
 #### Remote Device2
 
-##### 1. Create a device project directory and install m2m inside the directory.
+##### 1. Create a device project directory and install *m2m*.
 ```js
 $ npm install m2m
 ```
-##### 2. Save the code below as device.js in your device project directory.
+##### 2. Save the code below as *device.js* in your device project directory.
 
 ```js
 const { Device } = require('m2m');
