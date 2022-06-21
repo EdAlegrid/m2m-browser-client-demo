@@ -91,7 +91,8 @@ $ node device.js
 
 ## Option2 - Setup Remote Devices using Windows or Linux
 #### Remote Device1
-##### Here, we don't need to install array-gpio instead the gpio output will run in simulation mode.
+
+Here, you don't need to install the array-gpio module but instead the gpio resources will run in simulation mode.
 
 ##### 1. Create a device project directory and install *m2m*.
 ```js
