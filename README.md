@@ -11,7 +11,10 @@ The *m2m client* in the browser will directly access and capture resources from 
 
 The back-end server can be hosted from any platform - Linux, Windows or Mac. 
 
-The server practically just serves a static *index.html* file and the *node-m2m.min.js* file in the public folder using a localhost ip.
+The server practically just serves a static *index.html* file and the *node-m2m.min.js* library file in the public folder using a localhost ip.
+
+You can develop your application entirely in the front-end using the *node-m2m.min.js* library.
+The API is the same with node.js console library.
 
 The two remote devices ideally should be Raspberry Pi devices. However, if their are not available, you can just use any computers - Linux or Windows (GPIO in simulation-mode) instead.
 
