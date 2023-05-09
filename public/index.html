@@ -368,7 +368,7 @@
 
   function getData(){
     console.log('getData');
-    client.getData({id:100, channel:'get-data'}, (data) => {
+    client.read({id:100, channel:'get-data'}, (data) => {
       document.getElementById('msg8').innerHTML = data;  
     });
   }
@@ -376,21 +376,21 @@
   function sendData(){
     console.log('sendData');
     var inputData = document.getElementById("input-value").value;
-    client.sendData({id:100, channel:'send-data', payload:inputData}, (data) => {
+    client.write({id:100, channel:'send-data', payload:inputData}, (data) => {
       document.getElementById('msg9').innerHTML = data;  
     });
   }
 
   function watchData(){
     console.log('watchData');
-    client.watch({id:200, channel:'random-number'}, (data) => {
+    client.subscribe({id:200, channel:'random-number'}, (data) => {
       document.getElementById('msg10').innerHTML = data;  
     });
   }
 
   function unwatchData(){
     console.log('unwatchData');
-    client.unwatch({id:200, channel:'random-number'}, (data) => {
+    client.unsubscribe({id:200, channel:'random-number'}, (data) => {
       document.getElementById('msg11').innerHTML = data;  
     });
   }
