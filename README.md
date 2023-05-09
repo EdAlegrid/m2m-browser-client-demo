@@ -7,7 +7,7 @@
 
 This demo consists of a simple front-end using an *m2m client*, a back-end server using *nodejs* and *express* and two remote devices. 
 
-The *m2m client* in the browser will directly access and capture resources from the two remote devices.
+The *m2m client* in the browser will directly access and capture resources from the two remote devices - device1 and device2.
 
 The back-end server can be hosted from any platform - Linux, Windows or Mac. 
 
@@ -46,11 +46,11 @@ device.connect('https://www.node-m2m.com', () => {
   device.setGpio({mode:'input', pin:[11, 13]}, (gpio) => console.log('input pin', gpio.pin, 'state', gpio.state));
   device.setGpio({mode:'output', pin:[33, 35]}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
 
-  device.setData('get-data', (data) => {
+  device.dataSource('get-data', (data) => {
     data.send(myData);
   });
 
-  device.setData('send-data', (data) => {
+  device.dataSource('send-data', (data) => {
     if(data.payload){
       myData = data.payload;
       data.send(data.payload);
@@ -83,7 +83,7 @@ device.connect('https://www.node-m2m.com', () => {
   device.setGpio({mode:'input', pin:[11, 13]}, (gpio) => console.log('input pin', gpio.pin, 'state', gpio.state));
   device.setGpio({mode:'output', pin:[33, 35]}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
   
-  device.setData('random-number', (data) => {
+  device.publish('random-number', (data) => {
     let r = Math.floor(Math.random() * 100) + 25;
     data.send(r);
     console.log('random', r);
@@ -123,11 +123,11 @@ device.connect('https://www.node-m2m.com', () => {
   device.setGpio({mode:'input', pin:[11, 13], type:'simulation'}, (gpio) => console.log('input pin', gpio.pin, 'state', gpio.state));
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
 
-  device.setData('get-data', (data) => {
+  device.dataSource('get-data', (data) => {
     data.send(myData);
   });
 
-  device.setData('send-data', (data) => {
+  device.dataSource('send-data', (data) => {
     if(data.payload){
       myData = data.payload;
       data.send(data.payload);
@@ -160,7 +160,7 @@ device.connect('https://www.node-m2m.com', () => {
   device.setGpio({mode:'input', pin:[11, 13], type:'simulation'}, (gpio) => console.log('input pin', gpio.pin, 'state', gpio.state));
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
     
-  device.setData('random-number', (data) => {
+  device.publish('random-number', (data) => {
     let r = Math.floor(Math.random() * 100) + 25;
     data.send(r);
     console.log('random', r);
