@@ -15,7 +15,7 @@ The back-end serves a static *index.html* file and the *node-m2m.min.js* library
 
 You will need to get a web access token to authenticate your browser client with node-m2m to secure your browser application. To get a web access token, login to node-m2m, click the menu icon, then go to security section to finally generate your web access token.    
 
-The two remote devices ideally should be Raspberry Pi devices. However, as an alternative if they are not available, you can just use any x64 computers - Linux or Windows (GPIO in simulation-mode) instead.
+The two remote devices ideally should be Raspberry Pi devices. However, as an alternative if they are not available, you can just use any x64 computers - Linux or Windows and set GPIO in simulation mode.
 
 <br>
 
