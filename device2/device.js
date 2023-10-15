@@ -9,7 +9,7 @@ device.connect('https://www.node-m2m.com', () => {
   //device.setGpio({mode:'output', pin:[33, 35]}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state)); // rpi
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
   
-  device.setData('random-number', (data) => {
+  device.publish('random-number', (data) => {
     let r = Math.floor(Math.random() * 100) + 25;
     data.send(r);
     console.log('random', r);
