@@ -12,11 +12,11 @@ device.connect('https://www.node-m2m.com', () => {
   //device.setGpio({mode:'output', pin:[33, 35]}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state)); // rpi
   device.setGpio({mode:'output', pin:[33, 35], type:'simulation'}, (gpio) => console.log('output pin', gpio.pin, 'state', gpio.state));
   
-  device.setData('get-data', (data) => {
+  device.dataSource('get-data', (data) => {
     data.send(myData);
   });
  
-  device.setData('send-data', (data) => {
+  device.dataSource('send-data', (data) => {
     if(data.payload){
       myData = data.payload;
       data.send(data.payload);
