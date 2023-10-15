@@ -1,22 +1,19 @@
-# Web Application Demo Using Only A Browser Client
+# Node-M2M Web Application Demo Using A Browser Client
 
 ![](assets/webApplicationDemo.svg)
 [](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 
 <!-- This is a quick demo on how to integrate *m2m* into your web application project. -->
 
-This demo consists of a simple front-end using an *m2m client*, a back-end server using *nodejs* and *express* and two remote devices. 
+This demo consists of a simple front-end consisting of an *m2m client*, a back-end server using *nodejs* and *express* and the two remote devices. 
 
 The *m2m client* in the browser will directly access and capture resources from the two remote devices - device1 and device2.
 
 The back-end server can be hosted from any platform - Linux, Windows or Mac. 
 
-The server practically just serves a static *index.html* file and the *node-m2m.min.js* library file in the public folder using a localhost ip.
+The back-end serves a static *index.html* file and the *node-m2m.min.js* library file from the public folder using localhost(127.0.0.1) and port 4500.
 
-You can develop your application entirely in the front-end using the *node-m2m.min.js* library.
-The API is the same with node.js console library.
-
-The two remote devices ideally should be Raspberry Pi devices. However, if their are not available, you can just use any computers - Linux or Windows (GPIO in simulation-mode) instead.
+The two remote devices ideally should be Raspberry Pi devices. However, as an alternative if they are not available, you can just use any x64 computers - Linux or Windows (GPIO in simulation-mode) instead.
 
 <br>
 
@@ -100,7 +97,7 @@ $ node device.js
 ```
 <br>
 
-## Option2 - Using Windows or Linux on the remote devices
+## Option2 - Using Windows or Linux as remote devices
 #### Remote Device1
 
 Here, you don't need to install the array-gpio module but instead the gpio resources will run in simulation mode.
