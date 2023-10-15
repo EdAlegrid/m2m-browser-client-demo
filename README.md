@@ -13,6 +13,8 @@ The back-end server can be hosted from any platform - Linux, Windows or Mac.
 
 The back-end serves a static *index.html* file and the *node-m2m.min.js* library file from the public folder using localhost(127.0.0.1) and port 4500.
 
+You will need to get a web access token to authenticate your browser client for security. To get a web access token, login to node-m2m. Click the menu icon, go to security section.    
+
 The two remote devices ideally should be Raspberry Pi devices. However, as an alternative if they are not available, you can just use any x64 computers - Linux or Windows (GPIO in simulation-mode) instead.
 
 <br>
