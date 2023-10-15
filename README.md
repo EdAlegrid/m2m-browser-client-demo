@@ -1,4 +1,4 @@
-# Node-M2M Web Application Demo Using A Browser Client
+# Node-M2M Web Application Demo
 
 ![](assets/webApplicationDemo.svg)
 [](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
